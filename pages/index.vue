@@ -3,7 +3,7 @@
     <section class="hero">
       <v-container>
         <v-row no-gutters>
-          <v-col md="4" class="bg-symbol-1 mt-12">
+          <v-col md="4" offset="2" offset-md="0" class="bg-symbol-1 mt-12">
             <h4
               v-scroll-reveal.reset="revealFromBottom"
               class="overline mb-4 mb-5"
@@ -39,49 +39,60 @@
           </v-col>
         </v-row>
       </v-container>
-      <div v-scroll-reveal.reset="revealFromRight" class="hero__dots"></div>
+      <div
+        v-scroll-reveal.reset="revealFromRight"
+        class="d-none d-md-block dots-map"
+      ></div>
     </section>
 
     <section class="py-12 mt-12">
       <v-container>
-        <div class="d-flex justify-center">
-          <div
-            v-scroll-reveal.reset="revealFromRightWithDelay(100)"
-            class="icon-box"
-          >
-            <div class="icon-box__icon mb-7">
-              <v-icon x-large>mdi-leaf</v-icon>
+        <v-row>
+          <v-col offset="2" offset-sm="0" sm="6" md="3">
+            <div
+              v-scroll-reveal.reset="revealFromRightWithDelay(100)"
+              class="icon-box active"
+            >
+              <div class="icon-box__icon mb-7">
+                <v-icon x-large>mdi-leaf</v-icon>
+              </div>
+              <h4 class="title">Quality coffee cultivated by Good</h4>
             </div>
-            <h4 class="title">Quality coffee cultivated by Good</h4>
-          </div>
-          <div
-            v-scroll-reveal.reset="revealFromRightWithDelay(200)"
-            class="icon-box"
-          >
-            <div class="icon-box__icon mb-7">
-              <v-icon x-large>mdi-flower-tulip-outline</v-icon>
+          </v-col>
+          <v-col offset="2" offset-sm="0" sm="6" md="3">
+            <div
+              v-scroll-reveal.reset="revealFromRightWithDelay(200)"
+              class="icon-box"
+            >
+              <div class="icon-box__icon mb-7">
+                <v-icon x-large>mdi-flower-tulip-outline</v-icon>
+              </div>
+              <h4 class="title">Flavour Single Origin Froth in spoon iced</h4>
             </div>
-            <h4 class="title">Flavour Single Origin Froth in spoon iced</h4>
-          </div>
-          <div
-            v-scroll-reveal.reset="revealFromRightWithDelay(300)"
-            class="icon-box"
-          >
-            <div class="icon-box__icon mb-7">
-              <v-icon x-large>mdi-sprout-outline</v-icon>
+          </v-col>
+          <v-col offset="2" offset-sm="0" sm="6" md="3">
+            <div
+              v-scroll-reveal.reset="revealFromRightWithDelay(300)"
+              class="icon-box"
+            >
+              <div class="icon-box__icon mb-7">
+                <v-icon x-large>mdi-sprout-outline</v-icon>
+              </div>
+              <h4 class="title">Milk grounds chicory beans single origin</h4>
             </div>
-            <h4 class="title">Milk grounds chicory beans single origin</h4>
-          </div>
-          <div
-            v-scroll-reveal.reset="revealFromRightWithDelay(400)"
-            class="icon-box"
-          >
-            <div class="icon-box__icon mb-7">
-              <v-icon x-large>mdi-flower-outline</v-icon>
+          </v-col>
+          <v-col offset="2" offset-sm="0" sm="6" md="3">
+            <div
+              v-scroll-reveal.reset="revealFromRightWithDelay(400)"
+              class="icon-box"
+            >
+              <div class="icon-box__icon mb-7">
+                <v-icon x-large>mdi-flower-outline</v-icon>
+              </div>
+              <h4 class="title">Coffee irish robusta spoon robust.</h4>
             </div>
-            <h4 class="title">Coffee irish robusta spoon robust.</h4>
-          </div>
-        </div>
+          </v-col>
+        </v-row>
       </v-container>
     </section>
 
@@ -91,7 +102,7 @@
           <v-col lg="6">
             <div
               v-scroll-reveal.reset="revealPointedImg1"
-              class="pointed-img-wrap"
+              class="pointed-img-wrap mb-12 mb-md-0"
             >
               <v-img
                 :src="require('~/assets/images/coffee-cups.jpg')"
@@ -148,7 +159,7 @@
           </p>
         </div>
         <v-row align="center" justify="center" no-gutters>
-          <v-col lg="4">
+          <v-col cols="12" md="4" class="mb-12 mb-md-0">
             <img
               v-scroll-reveal.reset="revealFromTopWithDelay(100)"
               src="~assets/images/products/amber.png"
@@ -174,7 +185,7 @@
               <v-icon left>mdi-hand-pointing-right</v-icon> $20.00
             </v-btn>
           </v-col>
-          <v-col lg="4">
+          <v-col cols="12" md="4" class="mb-12 mb-md-0">
             <img
               v-scroll-reveal.reset="revealFromTopWithDelay(200)"
               src="~assets/images/products/black.png"
@@ -200,7 +211,7 @@
               <v-icon left>mdi-hand-pointing-right</v-icon> $20.00
             </v-btn>
           </v-col>
-          <v-col lg="4">
+          <v-col cols="12" md="4" class="mb-12 mb-md-0">
             <img
               v-scroll-reveal.reset="revealFromTopWithDelay(300)"
               src="~assets/images/products/white.png"
@@ -228,12 +239,14 @@
           </v-col>
         </v-row>
       </v-container>
+
+      <div class="d-none d-md-block dots-map left"></div>
     </section>
 
     <section class="py-12 my-12">
       <v-container>
         <v-row align="center" no-gutters>
-          <v-col lg="6" class="bg-symbol-2">
+          <v-col md="6" class="bg-symbol-2">
             <h4 v-scroll-reveal.reset="revealFromBottom" class="overline mb-4">
               Premium Coffee
             </h4>
@@ -260,10 +273,10 @@
               <v-icon left>mdi-hand-pointing-right</v-icon> Shop now
             </v-btn>
           </v-col>
-          <v-col lg="6">
+          <v-col md="6">
             <div
               v-scroll-reveal.reset="revealPointedImg2"
-              class="pointed-img-wrap left"
+              class="pointed-img-wrap mt-12 mt-md-0 left"
             >
               <v-img
                 :src="require('~/assets/images/gallery/pic3.jpg')"
@@ -275,8 +288,8 @@
       </v-container>
     </section>
 
-    <section class="gallery pt-12 text-center">
-      <div class="gallery__header mx-auto bg-symbol-2 pt-12 pb-2 my-12">
+    <section class="gallery pt-0 pt-md-12 text-center">
+      <div class="gallery__header mx-auto bg-symbol-2 pt-0 pt-md-12 pb-2 my-12">
         <h1
           v-scroll-reveal.reset="revealFromBottom"
           class="display-2 font-weight-black"
@@ -291,7 +304,7 @@
         </p>
       </div>
       <v-row no-gutters>
-        <v-col v-for="image in gallery" :key="image.id" md="2">
+        <v-col v-for="image in gallery" :key="image.id" cols="4" md="2">
           <v-img
             v-scroll-reveal.reset="revealFromRightWithDelay(image.revealDelay)"
             :src="require(`~/assets/images/gallery/${image.filename}`)"
@@ -303,14 +316,14 @@
     </section>
 
     <section class="grey darken-3 py-12 white--text text-center">
-      <div class="my-12">
+      <v-container class="my-12">
         <h1 class="display-2">Would you like to here from us?</h1>
         <p class="mx-auto mt-5 title font-weight-regular">
           Submit your email address for our newsletter
         </p>
 
         <v-row justify="center" no-gutters>
-          <v-col lg="4">
+          <v-col cols="8" md="4">
             <v-text-field
               v-model="email"
               label="Your Email address"
@@ -319,7 +332,7 @@
             ></v-text-field>
           </v-col>
         </v-row>
-      </div>
+      </v-container>
     </section>
   </div>
 </template>
@@ -438,34 +451,37 @@ export default {
 <style lang="scss">
 @import '~vuetify/src/styles/styles.sass';
 
-.bg-symbol-1 {
-  position: relative;
-  z-index: 2;
-
-  &::before {
-    background-image: url(~assets/images/symbol-bg1.png);
-    background-repeat: no-repeat;
-    width: 470px;
-    height: 400px;
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: -75px;
-    left: 100px;
-  }
-}
+.bg-symbol-1,
 .bg-symbol-2 {
   position: relative;
   z-index: 2;
 
   &::before {
-    background-image: url(~assets/images/symbol-bg2.png);
     background-repeat: no-repeat;
     width: 470px;
     height: 400px;
     content: '';
-    position: absolute;
     z-index: -1;
+    position: absolute;
+  }
+
+  @media #{map-get($display-breakpoints, 'sm-and-down')} {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.bg-symbol-1 {
+  &::before {
+    background-image: url(~assets/images/symbol-bg1.png);
+    top: -75px;
+    left: 100px;
+  }
+}
+.bg-symbol-2 {
+  &::before {
+    background-image: url(~assets/images/symbol-bg2.png);
     top: -125px;
     left: -50px;
   }
@@ -483,16 +499,6 @@ export default {
     right: -100px;
   }
 
-  .hero__dots {
-    position: absolute;
-    right: 0;
-    bottom: -100px;
-    height: 205px;
-    width: 200px;
-    margin-left: auto;
-    background-image: url(~assets/images/dots.png);
-  }
-
   .bg-symbol-1 {
     &::before {
       background-image: url(~assets/images/symbol-bg-hero.png);
@@ -502,8 +508,23 @@ export default {
   }
 }
 
+.dots-map {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  height: 205px;
+  width: 200px;
+  margin-left: auto;
+  background-image: url(~assets/images/dots.png);
+
+  &.left {
+    right: initial;
+    left: 0;
+  }
+}
+
 .icon-box {
-  width: 250px;
+  max-width: 250px;
   margin-right: 20px;
   padding: 40px;
   position: relative;
@@ -520,7 +541,7 @@ export default {
     background-color: rgba(map-get($amber, 'darken-1'), 0.1);
   }
 
-  &:first-of-type {
+  &.active {
     background-color: rgba(map-get($amber, 'darken-1'), 0.2);
 
     &::before {
@@ -547,16 +568,6 @@ export default {
       background-image: url(~assets/images/symbol-bg-shop.png);
     }
   }
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    height: 205px;
-    width: 200px;
-    background-image: url(~assets/images/dots.png);
-  }
 }
 
 .pointed-img-wrap {
@@ -581,6 +592,10 @@ export default {
     background-color: rgba(map-get($amber, 'darken-1'), 0.7);
     border-radius: 20px;
     transform: rotate(45deg);
+
+    @media #{map-get($display-breakpoints, 'sm-and-down')} {
+      display: none;
+    }
   }
 
   .pointed-img {
@@ -610,6 +625,10 @@ export default {
 .gallery {
   .gallery__header {
     width: 30%;
+
+    @media #{map-get($display-breakpoints, 'sm-and-down')} {
+      width: 100%;
+    }
   }
 }
 </style>

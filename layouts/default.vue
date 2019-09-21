@@ -5,7 +5,7 @@
         <img src="~assets/images/logo.png" alt="Noans" />
         <v-spacer />
 
-        <v-toolbar-items>
+        <v-toolbar-items class="d-none d-md-block">
           <v-btn v-scroll-reveal.reset="revealItem" text>Shop</v-btn>
           <v-btn v-scroll-reveal.reset="revealItem" text>Wholesale</v-btn>
           <v-btn v-scroll-reveal.reset="revealItem" text>Locations</v-btn>
@@ -17,6 +17,7 @@
         <v-btn v-scroll-reveal.reset="revealItem" icon>
           <v-icon>mdi-account-circle-outline</v-icon>
         </v-btn>
+        <v-app-bar-nav-icon class="d-md-none"></v-app-bar-nav-icon>
       </v-container>
     </v-toolbar>
 
